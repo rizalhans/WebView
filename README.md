@@ -1,7 +1,13 @@
 # WebView
+Ini bisa jadi refrensi anda untuk membuat aplikasi android berbasis webview
 
-Apa sih yang harus di Ubah?
-1. Link URL landing page
-2. Dari landing Page (inde.html) dialihkan ke halaman asli dengan javascript
-3. Bikin page error (error.html) indikasi buat klo gak ada intenet
-4. Main Activiti package di ganti pakai punya anda
+### cara memulai
+1. Setting App Manifest
+2. Gunakan MainActivitiy.java
+3. Ubah Layout activity_main.xml seperti yang tertera
+4. Tambahkan LandingPage Atau SlashPage yang 
+app > src > main > assets
+5. Tambahkan src suara di atas ke 
+app > src > main > res > raw
+6. Edit inde.html dan error.html di assets td sesuai kebutuhan anda. 
+7. Tambahkan Icon untuk aplikasi anda
