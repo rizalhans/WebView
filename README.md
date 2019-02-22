@@ -11,3 +11,4 @@ app > src > main > assets
 app > src > main > res > raw
 6. Edit inde.html dan error.html di assets td sesuai kebutuhan anda. 
 7. Tambahkan Icon untuk aplikasi anda
+8. Ganti weblain.com di java menjadi web tujuan anda
