@@ -37,6 +37,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
 import android.provider.MediaStore;
+import android.webkit.GeolocationPermissions;
 
 import java.io.File;
 import java.io.IOException;
@@ -113,9 +114,19 @@ public class MainActivity extends AppCompatActivity {
 			// buat buka halaman erro
             mWebView.loadUrl("file:///android_asset/error.html");
         }
+	    
+	ActivityCompat.requestPermissions(this, new String[]{
+                Manifest.permission.ACCESS_FINE_LOCATION,
+                Manifest.permission.ACCESS_COARSE_LOCATION
+        }, 0);
 
 
         mWebView.setWebChromeClient(new WebChromeClient() {
+		
+	    @Override
+            public void onGeolocationPermissionsShowPrompt(String origin, GeolocationPermissions.Callback callback) {
+                callback.invoke(origin, true, false);
+            }
 
             //For Android 3.0+
             public void openFileChooser(ValueCallback<Uri> uploadMsg) {
