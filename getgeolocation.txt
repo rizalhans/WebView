@@ -1,0 +1,30 @@
+#get geolocation by js
+<script>
+function getLocationConstant()
+{
+  if(navigator.geolocation)
+  {
+   navigator.geolocation.getCurrentPosition(onGeoSuccess,onGeoError);
+  } else {
+   alert("No GPS support");
+  }
+}
+
+
+function onGeoSuccess(event)
+{
+    document.getElementById("location").value =  event.coords.latitude+", "+event.coords.longitude;
+    alert("Success: "+event.coords.latitude+", "+event.coords.longitude);
+}
+
+
+function onGeoError(event)
+{
+  alert("Error code " + event.code + ". " + event.message);
+}
+
+
+</script>
+
+<input type="text" name="location" id="location" style="width:278px;">
+<button onclick="getLocationConstant()" >Click</button>
