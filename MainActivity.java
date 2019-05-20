@@ -79,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
         webSettings.setAllowFileAccess(true);
         webSettings.setBuiltInZoomControls(true);
         webSettings.setDisplayZoomControls(false);
+	 webSettings.setGeolocationEnabled(true);
         if (Build.VERSION.SDK_INT >= 21) {
             webSettings.setMixedContentMode(0);
             mWebView.setLayerType(View.LAYER_TYPE_HARDWARE, null);
